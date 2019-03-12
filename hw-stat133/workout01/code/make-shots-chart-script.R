@@ -1,19 +1,18 @@
 #######################
-#title:
-#description:
-#input(s):
-#output(s):
+#title:Make-shots-chart-script
+#description:Using the prepared data frame to draw the players' make-shots-chart seperately to pdf files and facetting them to a png file.
+#input(s):1)picture: nba-court.jpg 2)data frames:iguodala,green,durant,thompson,curry
+#output(s):andre-iguodala-shot-chart.pdf;draymond-green-shot-chart.pdf;kevin-durant-shot-chart.pdf;klay-thompson-shot-chart.pdf;stephen-curry-shot-chart.pdf;gsw-shots-chart.pdf;gsw-shots-chart.png
 ######################
 
+setwd("~/../Desktop/hw-stat133")
 getwd()
 library(ggplot2)
-install.packages("jpeg")
 library(jpeg)
 library(png)
 library(grid)
-install.packages("grid")
 
-court_file<-"../images/nba-court.jpg"
+court_file<-"./workout01/images/nba-court.jpg"
 
 court_image<-rasterGrob(
   readJPEG(court_file),
@@ -21,7 +20,7 @@ court_image<-rasterGrob(
   height=unit(1,"npc")
 )
 
-setwd("../images")
+setwd("./workout01/images")
 iguodala_scatterplot<-ggplot(iguodala)+
   annotation_custom(court_image,-250,250,-50,420)+
   geom_point((aes(x=x,y=y,color=shot_made_flag)))+
@@ -90,5 +89,6 @@ png("gsw-shots-chart.png",width=8,height=7,units = "in",res=500)
 shots_scatterplot
 dev.off()
 
-
+setwd("../..")
+getwd()
 

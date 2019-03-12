@@ -1,11 +1,11 @@
 #######################
-#title:
-#description:
-#input(s):
-#output(s):
-######################
+#title:Make-shots-data-script
+#description:Reading the downloaded gsw players csv data files as data frames. Modifying and adding some variables to help following analysis and outputting the summaries of the data. 
+#input(s):andre-iguodala.csv;draymond-green.csv;kevin-durant.csv;klay-thompson.csv;stephen-curry.csv
+#output(s):andre-iguodala-summary.txt;draymond-green-summary.txt;kevin-durant-summary.txt;klay-thompson-summary.txt;stephen-curry-summary.txt
+#######################
 
-setwd("C:/Users/xiaol/Desktop")
+setwd("~/../Desktop/hw-stat133")
 library(dplyr)
 #reading files
 iguodala<-read.csv("./workout01/data/andre-iguodala.csv", stringsAsFactors=F)
@@ -92,3 +92,4 @@ sink("shots-data-summary.txt")
 summary(shots_data)
 sink()
 
+setwd("~/../Desktop/hw-stat133")
