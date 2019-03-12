@@ -1,0 +1,67 @@
+---
+title: "workout01-xiaolu-chen"
+author: "Xiaolu Chen"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##1)File Structure
+```{r,eval=FALSE}
+mkdir workout01 #create workout01 file
+git init
+touch README.md #create README.md
+git add README.md
+git status
+git commit -m "Create REAME.md"
+
+#add some lines in README.md 
+git add README.md
+git status
+git commit -m "Description of this HW"
+
+#create other files
+mkdir data
+mkdir code
+mkdir output
+mkdir images
+mkdir report
+
+#create data files
+cd data
+touch andre-iguodala.csv
+git add andre-iguodala.csv
+touch draymond-green.csv 
+git add draymond-green.csv 
+touch kevin-durant.csv
+git add kevin-durant.csv
+touch klay-thompson.csv
+git add klay-thompson.csv
+touch stephen-curry.csv
+git add stephen-curry.csv
+git commit -m "Download data files"
+```
+
+##2)Data
+```{r}
+getwd()
+setwd("C:/Users/xiaol/Desktop")
+download.file("https://raw.githubusercontent.com/ucb-stat133/stat133-hws/master/data/andre-iguodala.csv","./workout01/data/andre-iguodala.csv")
+download.file("https://raw.githubusercontent.com/ucb-stat133/stat133-hws/master/data/draymond-green.csv","./workout01/data/draymond-green.csv")
+download.file("https://raw.githubusercontent.com/ucb-stat133/stat133-hws/master/data/andre-iguodala.csv","./workout01/data/kevin-durant.csv")
+download.file("https://raw.githubusercontent.com/ucb-stat133/stat133-hws/master/data/klay-thompson.csv","./workout01/data/klay-thompson.csv")
+download.file("https://raw.githubusercontent.com/ucb-stat133/stat133-hws/master/data/stephen-curry.csv","./workout01/data/stephen-curry.csv")
+```
+```{r, eval=FALSE}
+touch data-dictionary.md
+git add README.md
+git status
+git commit -m "Names and Short Description of Variables"
+
+```
+
+##3)Data Preparation
+
+```
