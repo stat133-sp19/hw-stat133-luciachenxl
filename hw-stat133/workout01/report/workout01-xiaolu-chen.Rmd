@@ -36,6 +36,6 @@ arrange(summarise(group_by(shots_data,player),total=sum(shot_made_flag=="shot_ye
 
 ### The image of GSW Shot Chart
 ```{r out.width='80%',echo=TRUE,fig.align='center'}
-knitr::include_graphics('C:/Users/xiaol/Desktop/hw-stat133/workout01/images/gsw-shots-chart.png')
+knitr::include_graphics("C:/Users/xiaol/Desktop/hw-stat133/workout01/images/gsw-shots-chart.png")
 ```
 
