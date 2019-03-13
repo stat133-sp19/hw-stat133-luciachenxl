@@ -5,15 +5,15 @@
 #output(s):andre-iguodala-summary.txt;draymond-green-summary.txt;kevin-durant-summary.txt;klay-thompson-summary.txt;stephen-curry-summary.txt
 #######################
 
-setwd("~/../Desktop/hw-stat133")
+setwd("../code")
 getwd()
 library(dplyr)
 #reading files
-iguodala<-read.csv("./workout01/data/andre-iguodala.csv", stringsAsFactors=F)
-green<-read.csv("./workout01/data/draymond-green.csv", stringsAsFactors=F)
-durant<-read.csv("./workout01/data/kevin-durant.csv", stringsAsFactors=F)
-thompson<-read.csv("./workout01/data/klay-thompson.csv", stringsAsFactors=F)
-curry<-read.csv("./workout01/data/stephen-curry.csv", stringsAsFactors=F)
+iguodala<-read.csv("../data/andre-iguodala.csv", stringsAsFactors=F)
+green<-read.csv("../data/draymond-green.csv", stringsAsFactors=F)
+durant<-read.csv("../data/kevin-durant.csv", stringsAsFactors=F)
+thompson<-read.csv("../data/klay-thompson.csv", stringsAsFactors=F)
+curry<-read.csv("../data/stephen-curry.csv", stringsAsFactors=F)
 
 #add a column name
 iguodala$player<-c(rep("Andre Iguodala",nrow(iguodala)))
@@ -61,7 +61,7 @@ thompson$minite=thompson$period*12-thompson$minutes_remaining
 curry$minite=curry$period*12-curry$minutes_remaining
 
 #output data frames into individual text files
-setwd("./workout01/output")
+setwd("../output")
 sink("andre-iguodala-summary.txt")
 summary(iguodala)
 sink()
@@ -93,5 +93,5 @@ sink("shots-data-summary.txt")
 summary(shots_data)
 sink()
 
-setwd("~/../Desktop/hw-stat133")
+setwd("../code")
 

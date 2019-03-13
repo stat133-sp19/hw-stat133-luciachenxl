@@ -5,14 +5,14 @@
 #output(s):andre-iguodala-shot-chart.pdf;draymond-green-shot-chart.pdf;kevin-durant-shot-chart.pdf;klay-thompson-shot-chart.pdf;stephen-curry-shot-chart.pdf;gsw-shots-chart.pdf;gsw-shots-chart.png
 ######################
 
-setwd("~/../Desktop/hw-stat133")
+setwd("../code")
 getwd()
 library(ggplot2)
 library(jpeg)
 library(png)
 library(grid)
 
-court_file<-"./workout01/images/nba-court.jpg"
+court_file<-"../images/nba-court.jpg"
 
 court_image<-rasterGrob(
   readJPEG(court_file),
@@ -20,7 +20,7 @@ court_image<-rasterGrob(
   height=unit(1,"npc")
 )
 
-setwd("./workout01/images")
+setwd("../images")
 iguodala_scatterplot<-ggplot(iguodala)+
   annotation_custom(court_image,-250,250,-50,420)+
   geom_point((aes(x=x,y=y,color=shot_made_flag)))+
@@ -78,7 +78,8 @@ shots_scatterplot<-ggplot(shots_data)+
   ggtitle(('Shot Chart: GSW(2016 season)'))+
   theme_minimal()+
   facet_wrap(~player)+
-  theme(legend.position = "top")
+  theme(legend.position = "top")+
+  theme(legend.title = element_blank())
 shots_scatterplot
 
 pdf("gsw-shots-chart.pdf",width=8,height=7)
@@ -89,6 +90,6 @@ png("gsw-shots-chart.png",width=8,height=7,units = "in",res=500)
 shots_scatterplot
 dev.off()
 
-setwd("../..")
-getwd()
+setwd("../code")
+
 
