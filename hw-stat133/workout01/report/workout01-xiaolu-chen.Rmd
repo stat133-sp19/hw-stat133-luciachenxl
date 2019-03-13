@@ -7,11 +7,10 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setwd("~/../Desktop/hw-stat133")
-getwd()
+setwd("../report")
 ```
 ```{r echo=FALSE}
-shots_data<-read.csv("~/../Desktop/hw-stat133/workout01/data/shots-data.csv")
+shots_data<-read.csv("../data/shots-data.csv")
 ```
 ### Table1: 2PT Effective Shooting % by Player
 
@@ -36,6 +35,6 @@ arrange(summarise(group_by(shots_data,player),total=sum(shot_made_flag=="shot_ye
 
 ### The image of GSW Shot Chart
 ```{r out.width='80%',echo=TRUE,fig.align='center'}
-knitr::include_graphics("~/../Desktop/hw-stat133/workout01/images/gsw-shots-chart.png")
+knitr::include_graphics("../images/gsw-shots-chart.png")
 ```
 

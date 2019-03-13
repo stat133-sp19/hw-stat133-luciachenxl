@@ -6,6 +6,7 @@
 #######################
 
 setwd("~/../Desktop/hw-stat133")
+getwd()
 library(dplyr)
 #reading files
 iguodala<-read.csv("./workout01/data/andre-iguodala.csv", stringsAsFactors=F)
