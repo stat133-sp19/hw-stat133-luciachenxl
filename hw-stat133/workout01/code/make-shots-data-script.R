@@ -59,7 +59,7 @@ durant$minite=durant$period*12-durant$minutes_remaining
 thompson$minite=thompson$period*12-thompson$minutes_remaining
 curry$minite=curry$period*12-curry$minutes_remaining
 
-#outpuu data frames into individual text files
+#output data frames into individual text files
 setwd("./workout01/output")
 sink("andre-iguodala-summary.txt")
 summary(iguodala)
@@ -93,3 +93,4 @@ summary(shots_data)
 sink()
 
 setwd("~/../Desktop/hw-stat133")
+
