@@ -28,7 +28,7 @@ arrange(summarise(group_by(pt2,player),total=sum(shot_made_flag=="shot_yes"|shot
     ##   player         total  made perc_made
     ##   <fct>          <int> <int>     <dbl>
     ## 1 Andre Iguodala   210   134     0.638
-    ## 2 Kevin Durant     210   134     0.638
+    ## 2 Kevin Durant     643   390     0.607
     ## 3 Stephen Curry    563   304     0.540
     ## 4 Klay Thompson    640   329     0.514
     ## 5 Draymond Green   346   171     0.494
@@ -45,8 +45,8 @@ arrange(summarise(group_by(pt3,player),total=sum(shot_made_flag=="shot_yes"|shot
     ##   <fct>          <int> <int>     <dbl>
     ## 1 Klay Thompson    580   246     0.424
     ## 2 Stephen Curry    687   280     0.408
-    ## 3 Andre Iguodala   161    58     0.360
-    ## 4 Kevin Durant     161    58     0.360
+    ## 3 Kevin Durant     272   105     0.386
+    ## 4 Andre Iguodala   161    58     0.360
     ## 5 Draymond Green   232    74     0.319
 
 ### Table3: Effective Shooting % by Player (overall)
@@ -58,8 +58,8 @@ arrange(summarise(group_by(shots_data,player),total=sum(shot_made_flag=="shot_ye
     ## # A tibble: 5 x 4
     ##   player         total  made perc_made
     ##   <fct>          <int> <int>     <dbl>
-    ## 1 Andre Iguodala   371   192     0.518
-    ## 2 Kevin Durant     371   192     0.518
+    ## 1 Kevin Durant     915   495     0.541
+    ## 2 Andre Iguodala   371   192     0.518
     ## 3 Klay Thompson   1220   575     0.471
     ## 4 Stephen Curry   1250   584     0.467
     ## 5 Draymond Green   578   245     0.424
@@ -67,7 +67,7 @@ arrange(summarise(group_by(shots_data,player),total=sum(shot_made_flag=="shot_ye
 ### The image of GSW Shot Chart
 
 ``` r
-knitr::include_graphics("C:/Users/xiaol/Desktop/hw-stat133/workout01/images/gsw-shots-chart.png")
+knitr::include_graphics("~/../Desktop/hw-stat133/workout01/images/gsw-shots-chart.png")
 ```
 
-<img src="C:/Users/xiaol/Desktop/hw-stat133/workout01/images/gsw-shots-chart.png" width="80%" style="display: block; margin: auto;" />
+<img src="~/../Desktop/hw-stat133/workout01/images/gsw-shots-chart.png" width="80%" style="display: block; margin: auto;" />
