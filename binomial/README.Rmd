@@ -1,6 +1,7 @@
 ---
 output:
-  md_document
+  md_document;
+  github_document
 ---
 
 
