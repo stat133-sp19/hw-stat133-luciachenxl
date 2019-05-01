@@ -1,0 +1,89 @@
+---
+title: "Getting started with binomial"
+author: "Xiaolu Chen"
+date: "04/28/2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, echo= FALSE, message=FALSE}
+knitr::opts_chunk$set(collapse= T, comment = "#>")
+library(binomial)
+```
+
+## Binomial
+
+This package `"binomial"` implements functions for
+calculating probabilities of a Binomial random variable, and related calculations such as the
+probability distribution, the expected value, variance, etc.
+
+## Get the probability of successes trials
+
+With function `"bin_probability()"`, the probability of k successes in n trials can be calculated:
+
+```{r}
+# probability of getting 2 successes in 5 trials
+#(assuming prob of success = 0.5)
+bin_probability(success = 2, trials = 5, prob = 0.5)
+```
+
+## Get the distribution of probabilities of successes
+
+With the function `"bin_distribution()"`, a data frame showing the distribution of probability  different number of successes in certain number of trials can be displayed.
+
+```{r}
+#binomial probability distribution
+dis<-bin_distribution(trials = 5, prob = 0.5)
+dis
+
+#plot the distribution
+plot(dis)
+```
+
+## Get the cumulative probability
+
+Next, with the function `"bin_cumulative()"`,a data frame showing the distribution of cumulative probability ofdifferent number of successes in certain number of trials can be displayed.
+
+```{r}
+#cumulative binomial probability distribution
+dis<-bin_cumulative(trials = 5, prob = 0.5)
+dis
+
+#plot the cumulative distribution
+plot(dis)
+```
+
+
+## Summary
+
+Now, you may want to exam the summary of the variables and measures with function `"bin_variable()"`.
+
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+binsum1 <- summary(bin1)
+binsum1
+```
+
+## Measures
+
+Last, there are some function to calculate the measures:
+
+the expected value: `"bin_mean()"`
+
+the variance: `"bin_variance()"`
+
+the mode: `"bin_mode()"`
+
+the skewness: `"bin_skewness()"`
+
+the kurtosis: `"bin_kurtosis"`
+
+
+
+
+
+

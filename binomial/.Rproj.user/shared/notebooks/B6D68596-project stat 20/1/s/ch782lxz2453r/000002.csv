@@ -1,0 +1,5 @@
+"0","pie(perc_sf,"
+"0","    labels = per0_sf$type,"
+"0","    main=""Percentages of property types in San Francisco"","
+"0","    col=terrain.colors(length(perc_sf)),"
+"0","    cex=0.7)"
